@@ -3,19 +3,8 @@
 set -o pipefail
 source config.sh
 
-#PATH
-#CONTAINER 
-#TODAY 
-#DB_BACKUP_PATH 
-#MYSQL_HOST 
-#MYSQL_PORT 
-#MYSQL_USER 
-#MYSQL_PASSWORD
-
-######### From BackUpAllDatabase.sh ########./mysql_backup.sh $i 
 DATABASE_NAME="$1"
 
-#################################################################
 mkdir -p "${DB_BACKUP_PATH}/${TODAY}"
 echo "$(date +"%Y-%m-%d %T") mysql_backup.sh: Backup started for ${DATABASE_NAME} database"
 
@@ -30,7 +19,6 @@ else
   exit 1
 fi
 
-##### Remove backups older than {BACKUP_RETAIN_DAYS} days  ##### 
 echo "$(date +"%Y-%m-%d %T") mysql_backup.sh: ${DATABASE_NAME} database backup deletion ${BACKUP_RETAIN_DAYS} days ago started "
 DBDELDATE=$(date +"%d%b%Y" --date="${BACKUP_RETAIN_DAYS} days ago")
 
