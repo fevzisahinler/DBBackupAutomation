@@ -15,7 +15,7 @@ The system comprises three main components:
 
 1. Clone this repository to your server where the databases are hosted.
 2. Customize the `config.sh` file with your own settings (AWS S3 bucket, Discord webhook, database credentials, etc.)
-3. Fill in the SCRIPT_PATH and LOG_PATH fields in the makefile.
+3. Fill in the `SCRIPT_PATH` and `LOG_PATH` fields in the makefile.
 3. Run `make install` to set up the cron job for automatic backups.
 4. Monitor your Discord channel for backup notifications.
 
